@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    
+    <div id="mainEle">
+
+        <div id="form">
+            <input v-model="name" type="text" placeholder="Name"/>
+            <input v-model="email" type="text" placeholder="Email"/>
+        </div>
+
+        <div>{{message}}</div>
+
+        <div v-for="cn in codenames">
+            <codenames v-bind:name="cn.name" v-bind:codename="cn.codename"></codenames>
+        </div>
+
+    </div>
+
+<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
